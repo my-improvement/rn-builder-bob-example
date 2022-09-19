@@ -5,4 +5,9 @@ class NewLib: NSObject {
   func multiply(a: Float, b: Float, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
     resolve(a*b)
   }
+
+  @objc(greet:withResolver:withRejecter:)
+  func greet(name: String, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
+    resolve("Halo " + name)
+  }
 }
